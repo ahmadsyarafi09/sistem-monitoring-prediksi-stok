@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f4f7fb;
+  color: #333;
+}
+
+/* HEADER */
+header h1 {
+  padding: 20px 30px;
+  margin: 0;
+  font-size: 28px;
+}
+
+header hr {
+  margin: 0 30px;
+}
+
+/* CONTAINER */
+.container {
+  padding: 30px;
+}
+
+.container h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+/* TOMBOL TAMBAH */
+.btn-tambah {
+  display: inline-block;
+  margin-bottom: 25px;
+  padding: 10px 16px;
+  background: #27ae60;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: background .2s;
+}
+
+.btn-tambah:hover {
+  background: #219150;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* CARD */
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 18px;
+  border-left: 6px solid #e74c3c;
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+  transition: transform .2s, box-shadow .2s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 30px rgba(0,0,0,.12);
+}
+
+.card h3 {
+  margin-top: 0;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+/* STATUS BADGE */
+.status {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.safe {
+  background: #eafaf1;
+  color: #27ae60;
+}
+
+.warning {
+  background: #fff4e5;
+  color: #e67e22;
+}
+
+.danger {
+  background: #fdecea;
+  color: #e74c3c;
+}
+
+/* ACTION BUTTON */
+.actions {
+  margin-top: 15px;
+}
+
+.actions a {
+  display: inline-block;
+  margin-right: 8px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  background: #3498db;
+  transition: opacity .2s;
+}
+
+.actions a:hover {
+  opacity: .85;
+}
+
+.danger-btn {
+  background: #e74c3c;
+}
+
+/* FOOTER */
+footer {
+  margin-top: 40px;
+  padding: 15px 30px;
+  font-size: 14px;
+  color: #777;
+}

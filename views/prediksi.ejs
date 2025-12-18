@@ -1,0 +1,15 @@
+<h2>Prediksi Stok</h2>
+
+<p>Barang: <b><%= barang.nama_barang %></b></p>
+
+<p>Data stok terakhir:</p>
+<ul>
+  <% barang.Riwayats.slice(-3).forEach(r => { %>
+    <li><%= r.jumlah %></li>
+  <% }) %>
+</ul>
+
+<p>Prediksi stok (Moving Average):</p>
+<h3><%= Math.round(rataRata) %></h3>
+
+<a href="/">Kembali</a>

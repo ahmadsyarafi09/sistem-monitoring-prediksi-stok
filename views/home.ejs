@@ -1,0 +1,42 @@
+<div class="container">
+  <h2>📦 Dashboard Monitoring Stok</h2>
+
+  <a href="/tambah" class="btn-tambah">➕ Tambah Barang</a>
+
+  <div class="grid">
+    <% barangs.forEach(barang => { %>
+      <div class="card">
+
+        <h3>📦 <%= barang.nama_barang %></h3>
+
+        <p>Stok: <strong><%= barang.stok %></strong></p>
+
+        <span class="status 
+          <%= barang.stok < 10 ? 'danger' : barang.stok < 20 ? 'warning' : 'safe' %>">
+          <%= barang.stok < 10 ? '🔥 Kritis' : barang.stok < 20 ? '⚠️ Menipis' : '✅ Aman' %>
+        </span>
+
+        <!-- FORM RIWAYAT STOK -->
+        <form action="/barang/<%= barang.id %>/riwayat" method="POST" class="form-riwayat">
+          <input 
+            type="number" 
+            name="jumlah" 
+            placeholder="+ masuk / - keluar"
+            required
+          />
+          <button type="submit">➕ Update Stok</button>
+        </form>
+
+        <a href="/prediksi/<%= barang.id %>" class="btn-prediksi">
+          📊 Prediksi Stok
+        </a>
+
+        <div class="actions">
+          <a href="/edit/<%= barang.id %>">✏️ Edit</a>
+          <a href="/hapus/<%= barang.id %>" class="danger-btn">🗑️ Hapus</a>
+        </div>
+
+      </div>
+    <% }) %>
+  </div>
+</div>
